@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      #clock { /* 시계 */
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 60px; /* 두 줄의 높이 */
+      }
+      #clock .date { /* 날짜 */
+        font-size: 38px;
+        font-weight: normal;
+        text-align: center;
+      }
+    </style>
+    <script>
+      function updateClock() {
+        var now = new Date();
+        var weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+        var year = now.getFullYear().toString();
+        var month = (now.getMonth() + 1).toString().padStart(2, '0');
+        var day = now.getDate().toString().padStart(2, '0');
+        var weekday = weekdays[now.getDay()];
+        var hours = now.getHours().toString().padStart(2, '0');
+        var minutes = now.getMinutes().toString().padStart(2, '0');
+        var seconds = now.getSeconds().toString().padStart(2, '0');
+        var date = year + '.' + month + '.' + day + '.(' + weekday + ')';
+        var time = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('clock').innerHTML = '<div class="date">' + date + '</div>' + '<div>' + time + '</div>';
+      }
+      
+      setInterval(updateClock, 1000);
+    </script>
+  </head>
+  <body>
+    <div id="clock"></div>
+  </body>
+</html>
