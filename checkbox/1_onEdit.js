@@ -4,7 +4,7 @@ function onEdit(e) { //자동 시간 입력, 자동 행 숨기기
   var sheet2 = SpreadsheetApp.getActive().getSheetByName("차현");
   var sheet3 = SpreadsheetApp.getActive().getSheetByName("종합");
 
-// test
+  
   ////////////////////////////////////////자동 시간 입력
   var check_cell = "S"; //체크박스 열
   var target_cell = "T"; //내용입력 열
