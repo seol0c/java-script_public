@@ -1,7 +1,7 @@
-function copy_value() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('DB');
-  var range1 = sheet.getRange('C3:C9'); //값
-  var range2 = sheet.getRange('D3:D9'); //타겟
+function copy_value1() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('크롤링');
+  var range1 = sheet.getRange('G18:G77'); //값
+  var range2 = sheet.getRange('H18:H77'); //타겟
 
   //타겟 값 백업
   var backup = range2.getValues();
@@ -25,3 +25,5 @@ function copy_value() {
   // 변경된 타겟 값 적용
   range2.setValues(backup);
 }
+
+//크롤링은 이제 안씀 - 홈페이지에서 추출
